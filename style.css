@@ -1,13 +1,64 @@
-.btn-block{
-    background-color: gray;
-    padding: 20px;
+.btn-block {
+  background: url(./img/matrix.png);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
-button{
-    width: 200px;
-    height: 100px;
-    background-color: yellow;
+button {
+  width: 200px;
+  height: 100px;
 }
-.blue-some{
-    background-color: blue;
+#blue {
+  cursor: pointer;
+  border: none;
+  font-size: 24px;
+  font-weight: 900;
+  background-color: rgb(0, 132, 255);
+  border-radius: 30px;
+  box-shadow: #fc0; /* Цвет фона */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
+  padding: 10px;
+}
+#red {
+  cursor: pointer;
+  border: none;
+  font-size: 24px;
+  font-weight: 900;
+  background-color: tomato;
+  border-radius: 30px;
+  box-shadow: #fc0; /* Цвет фона */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
+  padding: 10px;
+}
+.btn:hover{
+opacity: 0.9;
+}
+.btn:focus{
+  outline: none;
+}
+
+.carousel {
+  display: block;
+  
+  margin-top: 100px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 500px;
+  width: 500px;
+  border-radius: 20%;
+  overflow: hidden;
+}
+img {
+  
+  width: 500px;
+  height: 500px;
+  border-radius: 20%;
+  object-fit: cover;
+}
+.image-container {
+  
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
 }
