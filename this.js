@@ -197,7 +197,7 @@
 
 // Создаём Accumulator======================>
 
-// let Accumulator = function (startingValue) { 
+// let Accumulator = function (startingValue) {
 
 //     this.value = startingValue;
 //     this.read = function () {
@@ -213,3 +213,16 @@
 
 // alert(accumulator.value);
 
+function checkSpam(str) {
+    let lowerStr = str.toLowerCase();
+
+    return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}
+
+console.log(checkSpam('buy ViAgRA now'));
+console.log(checkSpam('free xxxxx'));
+console.log(checkSpam("innocent rabbit"));
+
+function truncate(str, maxlength) {
+    
+};

@@ -79,12 +79,12 @@
 // console.log(clone.sizes.width);
 
 // Смена тру на фолс и наоборот ------>
-let ChangeBooleanType = {
-    width: true,
-    height: false,
-    title: "String",
-    number: 123456
-};
+// let ChangeBooleanType = {
+//     width: true,
+//     height: false,
+//     title: "String",
+//     number: 123456
+// };
 
 function changeType(obj) {
     

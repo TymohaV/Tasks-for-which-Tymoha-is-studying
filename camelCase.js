@@ -16,4 +16,4 @@ for (i = 0; i < words.length; i++) {
     newArayWords.push(currentWord);
 
 };
-return newArayWords.join('');
+console.log(newArayWords.join(''));
