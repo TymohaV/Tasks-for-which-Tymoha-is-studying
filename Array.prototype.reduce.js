@@ -134,7 +134,7 @@ for (let i = 0; i < users.length; i++) {
 }
 console.log('Odesa' + '-', Odessa)
 console.log('Oleshky' + '-', Oleshky)
-
+// Добавлю что то для комита
 
 
 
