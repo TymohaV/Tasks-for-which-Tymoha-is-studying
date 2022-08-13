@@ -109,6 +109,7 @@
 координати після третьої команди — [1, -1] (1 крок назад);
 результатом буде масив [1, -1].
  */
+/** 
 function getLocation(coordinates, commands) {
   let x = coordinates[0];
   let y = coordinates[1];
@@ -135,6 +136,38 @@ function getLocation(coordinates, commands) {
 
 let resGetLoc = getLocation([2, 1], ['forward', 'left', 'right', 'back'])
 console.log(resGetLoc)
+*/
+/**  
+ * Функція має повертати масив із цілями на кожен місяць (скільки роботів треба виробити щоб дотримуватись запланованого зростання).
+
+Щоб краще зрозуміти, як це працює, розглянемо приклад. Припустимо, нам дано startProduction = 200, numberOfMonths = 3 та percent = 50:
+
+план на перший місяць — 200 + 50% = 300 роботів;
+на другий місяць це вже 300 + 50% = 450 роботів;
+і нарешті на третій місяць це 450 + 50% = 675 роботів.
+В результаті маємо отримати масив [300, 450, 675].
+
+Зверни увагу: ціль на наступний місяць потрібно рахувати на основі попереднього місяця.
+
+Якщо число роботів виявиться дробовим, округли його за допомогою Math.floor.
+ * 
+*/
+// function getPlan(startProduction, numberOfMonths, percent) {
+
+//   const goals = [];
+//   let target = startProduction  
+
+//   for (let i = 1; i <= numberOfMonths; i++) {
+//      target += Math.floor(target * percent / 100) 
+//     goals.push(target)
+
+//   }
+//   return goals
+// }
+
+// let resPlan = getPlan(10, 4, 30)
+// console.log(resPlan);
+
 
 
 
