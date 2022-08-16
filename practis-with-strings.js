@@ -157,21 +157,21 @@ function isPalindrome(str) {
 
 Зверни увагу: голосними літерами є aeiouy у будь-якому регістрі.
 */
-// function removeVowels(doc) {
-//   let result = '';
-//   let vowels = 'aeiouyAEIOUY'
-//   for(let letter of doc){
+function removeVowels(doc) {
+  let result = '';
+  let vowels = 'aeiouyAEIOUY'
+  for(let letter of doc){
 
-//       if(!vowels.includes(letter)){
+      if(!vowels.includes(letter)){
 
-//         result += letter
-//       }
-//    }
-//    return result
+        result += letter
+      }
+   }
+   return result
 
-// }
-// let resFunc = removeVowels('Abracadabra')
-// console.log(resFunc)
+}
+let resFunc = removeVowels('Abracadabra')
+console.log(resFunc)
 
 
 /*

@@ -168,6 +168,82 @@ console.log(resGetLoc)
 // let resPlan = getPlan(10, 4, 30)
 // console.log(resPlan);
 
+// https://www.youtube.com/watch?v=ipo6OnVCpQc&t=151s
+// Ссылка на задачу------------------------------>
+// function getSpeedStatistic(testResults) {
+//   if (testResults.length === 0) {
+//     return [0, 0, 0];
+//   }
+//   let max = testResults[0]
+//   let min = testResults[0]
+//   let sum = testResults[0]
+
+//   for (let i = 1; i < testResults.length; i++) {
+//     if (testResults[i] > max) {
+//       max = testResults[i];
+//     } else if (testResults[i] < min) {
+//       min = testResults[i];
+//     }
+//     sum += testResults[i];
+//   }
+//   let sumRes = Math.floor(sum / testResults.length);
+
+//   return [max, min, sumRes];
+// }
+// let resSpeedStat = getSpeedStatistic([10, 20, 30])
+// console.log(resSpeedStat);
 
 
+// https://www.youtube.com/watch?v=7vdkAYXzpnk
+// ссылка на задачу--------------------------
+// function compareRobots(firstRobotResults, secondRobotResults) {
 
+//   let firstSum = getTotalWeigtht(firstRobotResults);
+//   let secondSum = getTotalWeigtht(secondRobotResults);
+
+//   if(firstSum > secondSum){
+//     return 'First robot for sale!'
+//   }
+//   if(firstSum < secondSum){
+//     return 'Second robot for sale!'
+//   }
+//   return 'Both robot for sale!'
+// }
+// function getTotalWeigtht(weights){
+//   let total = 0;
+
+//   for(const weight of weights){
+//     total += weight;
+//   }
+//   return total;
+// }
+// getTotalWeigtht([1, 2, 3],[4, 5, 6])
+// let sumRobots = compareRobots([1, 2, 3],[4, 5, 6])
+// console.log(sumRobots);
+
+
+// function sumArray(a, b) {
+//   let c = [];
+//   for (let i = 0; i < Math.max(a.length, b.length); i++) {
+//     c.push((a[i] || 0) + (b[i] || 0));
+//   }
+//   return c;
+// }
+// let result = sumArray([1, 2, 3], [4, 5, 6])
+// console.log(result);
+
+
+// function getArraysSum(arr1, arr2) {
+//   if(arr1.length === 0 && arr2.length === 0){
+//     return 0;
+//   }
+//  return [...arr1, ...arr2].reduce((a, b) => a + b);
+// }
+
+function getDifferences(a, b) {
+  const open = [...a, ...b];
+  console.log(open);
+}
+
+let resGetDif = getDifferences([1, 2, 3, 4], [2, 3, 5, 6]);
+// console.log(resGetDif)

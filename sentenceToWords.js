@@ -11,3 +11,5 @@ for (i = 0; i < sentence.length; i++){
     }
 };
 console.log(resultArray);
+
+
