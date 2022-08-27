@@ -157,21 +157,21 @@ function isPalindrome(str) {
 
 Зверни увагу: голосними літерами є aeiouy у будь-якому регістрі.
 */
-function removeVowels(doc) {
-  let result = '';
-  let vowels = 'aeiouyAEIOUY'
-  for(let letter of doc){
+// function removeVowels(doc) {
+//   let result = '';
+//   let vowels = 'aeiouyAEIOUY'
+//   for(let letter of doc){
 
-      if(!vowels.includes(letter)){
+//       if(!vowels.includes(letter)){
 
-        result += letter
-      }
-   }
-   return result
+//         result += letter
+//       }
+//    }
+//    return result
 
-}
-let resFunc = removeVowels('Abracadabra')
-console.log(resFunc)
+// }
+// let resFunc = removeVowels('Abracadabra')
+// console.log(resFunc)
 
 
 /*
@@ -253,22 +253,67 @@ message та повертає новий рядок, де символи з mess
 
 
 
-function getSuccessRate(statistic) {
-  if (!statistic) {
-    return 0;
-  }
-  let count = 0;
+// function getSuccessRate(statistic) {
+//   if (!statistic) {
+//     return 0;
+//   }
+//   let count = 0;
 
-  for (let num of statistic) {
-    if (num === '1') {
-      count++;
-    }
+//   for (let num of statistic) {
+//     if (num === '1') {
+//       count++;
+//     }
 
-  }
-  return Math.round((count / statistic.length) * 100)
-}
-let resSuccsessRate = getSuccessRate('11100');
-console.log(resSuccsessRate);
+//   }
+//   return Math.round((count / statistic.length) * 100)
+// }
+// let resSuccsessRate = getSuccessRate('11100');
+// console.log(resSuccsessRate);
+
+
+/*
+Реалізуй функцію splitString, яка приймає рядок str, ділить його на частини по 2 символи, а потім повертає 
+масив з отриманих частин.
+Зверни увагу: якщо рядок містить непарну кількість символів, додай символ _ після останнього символу.
+------------------------------------------------------------------------------------------------->
+*/
+// function splitString(str) {
+//   let resArr = [];
+
+
+//   for (var i = 0; i < str.length; i += 2)  {
+//     resArr.push(`${str[i]} ${!!str[i+1] ? str[i+1] : '_' }`);
+
+
+//   }
+//   return resArr;
+// }
+// let = resSplit = splitString('1234567');
+// console.log(resSplit);
+
+/*
+Напиши функцію scrollingText, яка:
+
+приймає рядок word;
+послідовно переставляє всі символи в рядку з нульового індексу на останній;
+повертає масив з отриманими комбінаціями рядка у верхньому регістрі.
+*/
+// function scrollingText(word) {
+//   let upper = word.toUpperCase()
+//   let resArray = [upper];
+
+//   for (let i = 0; i < upper.length - 1; i++) {
+//     let scroledText = upper.slice(1) + upper.slice(0, 1)
+//     upper = scroledText
+//     resArray.push(upper);
+//   }
+//   return resArray
+// }
+// let res = scrollingText('Tymoha');
+// console.log(res)
+
+
+
 
 
 

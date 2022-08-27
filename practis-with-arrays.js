@@ -240,10 +240,20 @@ console.log(resGetLoc)
 //  return [...arr1, ...arr2].reduce((a, b) => a + b);
 // }
 
-function getDifferences(a, b) {
-  const open = [...a, ...b];
-  console.log(open);
-}
+// function getDifferences(a, b) {
+//   const open = [...a, ...b];
+//   console.log(open);
+// }
 
-let resGetDif = getDifferences([1, 2, 3, 4], [2, 3, 5, 6]);
+// let resGetDif = getDifferences([1, 2, 3, 4], [2, 3, 5, 6]);
 // console.log(resGetDif)
+
+
+
+function combineArrays(first, second) {
+  let result = first.map(function(value, index)
+  { return value + second[index] });
+return result
+  }
+let resCombine = combineArrays([1, 2, 3, 4], [2, 3, 5, 6])
+console.log(resCombine)
