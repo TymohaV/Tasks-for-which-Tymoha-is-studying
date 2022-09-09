@@ -31,22 +31,24 @@ let result = checkSubstring('@#$%^*(!)()({}[]', part='?');
 console.log(result);
 */
 
-// function getCapitals(string) {
-// let newArray = [];
+function getCapitals(string) {
+let newArray = [];
 
 
-// for(i = 0; i < string.length; i++ ){
-//   let currentElem = string[i];
+for(i = 0; i < string.length; i++ ){
+  let currentElem = string[i];
 
-//   if(currentElem.charCodeAt(0) >= 65 && currentElem.charCodeAt(0) <= 90){
-//     newArray.push(currentElem);
-//   }
-// }
-// return newArray;
+  if(currentElem.charCodeAt(0) >= 65 && currentElem.charCodeAt(0) <= 90){
+    newArray.push(currentElem);
+  }
+}
+return newArray;
 
-// }
-// let res = getCapitals(': I Am Learning JavaScript')
-// console.log(res);
+}
+
+
+let res = getCapitals(': I Am Learning JavaScript')
+console.log(res);
 
 
 // function removeVowelKeys(keys) {
@@ -311,7 +313,46 @@ message та повертає новий рядок, де символи з mess
 // }
 // let res = scrollingText('Tymoha');
 // console.log(res)
+// --------------------------------------------------------------------------------------------------------------->
+/*
+Створи функцію isSpecialNumber, яка приймає додатне число n і визначає, чи є воно особливим.
 
+Число називається особливим, якщо кожна його цифра не більша ніж 5 (0, 1, 2, 3, 4 або 5).
+
+Функція повинна повернути рядок 'Special!!', якщо число особливе, та 'NOT!!' — якщо ні.
+
+Наприклад:
+
+isSpecialNumber(2); // 'Special!!'
+// 2 — знаходиться в інтервалі від 0 до 5
+
+isSpecialNumber(9); // 'NOT!!'
+// 9 > 5
+
+isSpecialNumber(23); // 'Special!!'
+// всі цифри числа 23 знаходяться в інтервалі від 0 до 5
+
+isSpecialNumber(38); // 'NOT!!'
+// 8 > 5
+
+Підказка ------------------------------------------------------------------------------------------------------->
+-Перетвори число n на рядок, щоб перебрати його цифри.
+-Зроби перебір цього рядка.
+-На кожній ітерації перевіряй, чи поточний елемент більший ніж 5.
+-Якщо знайшлась цифра більша ніж 5 — поверни false.
+-------------------------------------------------------------------------------------------------------------->
+*/
+function isSpecialNumber(n) {
+  const toNum = n + '';
+  for (let i = 0; i < toNum.length; i ++) {
+    const Currentelement = toNum[i];
+    
+  }
+  console.log(typeof toNum)
+  return toNum
+}
+const spesNumberRes = isSpecialNumber(1, 22 ,3 ,55 ,4 ,98 ,8 ,7 ,6,)
+console.log(spesNumberRes)
 
 
 

@@ -222,37 +222,30 @@ console.log(resGetLoc)
 // console.log(sumRobots);
 
 
-// function sumArray(a, b) {
-//   let c = [];
-//   for (let i = 0; i < Math.max(a.length, b.length); i++) {
-//     c.push((a[i] || 0) + (b[i] || 0));
-//   }
-//   return c;
-// }
-// let result = sumArray([1, 2, 3], [4, 5, 6])
-// console.log(result);
+function sumArray(a, b) {
+  let c = [];
+  for (let i = 0; i < Math.max(a.length, b.length); i++) {
+    c.push((a[i] || 0) + (b[i] || 0));
+  }
+  return c;
+}
+let result = sumArray([1, 2, 3], [4, 5, 6])
+console.log(result);
 
 
-// function getArraysSum(arr1, arr2) {
-//   if(arr1.length === 0 && arr2.length === 0){
-//     return 0;
-//   }
-//  return [...arr1, ...arr2].reduce((a, b) => a + b);
-// }
-
-// function getDifferences(a, b) {
-//   const open = [...a, ...b];
-//   console.log(open);
-// }
-
-// let resGetDif = getDifferences([1, 2, 3, 4], [2, 3, 5, 6]);
-// console.log(resGetDif)
-
-
+function getArraysSum(arr1, arr2) {
+  if(arr1.length === 0 && arr2.length === 0){
+    return 0;
+  }
+ return [...arr1, ...arr2].reduce((a, b) => a + b);
+}
+let arraySumResult = getArraysSum([1, 2, 3, 4], [2, 3, 5, 6])
+console.log(arraySumResult)
 
 function combineArrays(first, second) {
-  let result = first.map(function(value, index)
-  { return value + second[index] });
+  let result = first.map(function(value, index){ 
+    return value + second[index] 
+  });
 return result
   }
 let resCombine = combineArrays([1, 2, 3, 4], [2, 3, 5, 6])

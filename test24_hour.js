@@ -25,17 +25,17 @@
  * Напиши функцію getLongestString, яка повертає найдовший рядок з масиву strings. 
  * Якщо два рядка мають однакову довжину - поверни перший з них.
  */
-// function getLongestString(strings) {
-//     let maxLength = strings[0];
+function getLongestString(strings) {
+    let maxLength = strings[0];
 
-//     for(let i = 1; i < strings.length; i++){
-//         if(strings[i].length > maxLength.length){
-//             maxLength = strings[i];
-//         }
+    for (let i = 1; i < strings.length; i++) {
+        if (strings[i].length > maxLength.length) {
+            maxLength = strings[i];
+        }
 
-//     } 
-//     return maxLength  
-// }
+    }
+    return maxLength
+}
 
 
 // let longest = getLongestString(['One', 'two', 'three','qwert', 'Mate Academy','four'])
@@ -112,28 +112,28 @@
  */
 
 
-// function getDifferences(a, b) {
-//     let temp = [];
-//     let diff = [];
+function getDifferences(a, b) {
+    let temp = [];
+    let diff = [];
 
-//     for(let i = 0; i < a.length; i ++){
-//         temp[a[i]] = true;
-//     }
-//     for(let i = 0; i < b.length; i ++){
-//         if(temp[b[i]]){
-//             delete temp[b[i]];
-//         }else{
-//             temp[b[i]] = true
-//         }
-//     }
-//     for(let k in temp){
-//         diff.push(Number(k))
-//     }
-//     return diff
-// }
+    for(let i = 0; i < a.length; i ++){
+        temp[a[i]] = true;
+    }
+    for(let i = 0; i < b.length; i ++){
+        if(temp[b[i]]){
+            delete temp[b[i]];
+        }else{
+            temp[b[i]] = true
+        }
+    }
+    for(let k in temp){
+        diff.push(Number(k))
+    }
+    return diff
+}
 
-// let resgetDiff = getDifferences([1, 2, 3, 4],[2, 3, 5, 6])
-// console.log(resgetDiff)
+let resgetDiff = getDifferences([1, 2, 3, 4],[2, 3, 5, 6])
+console.log(resgetDiff)
 
 // function getDifferences(a, b) {
 
@@ -144,11 +144,13 @@
 // ------------------------------------------------------------------------------------------->
 
 
-
-/**Допиши функцію getPersistence, яка приймає невід'ємне число number, та повертає його мультиплікативну стійкість. 
+/*
+Допиши функцію getPersistence, яка приймає невід'ємне число number, та повертає його мультиплікативну стійкість. 
  * Для цього потрібно перемножати всі цифри числа між собою, повторюючи цю операцію з добутком множення, 
  * доки результат не буде містити тільки одну цифру. 
  * Функція повинна повернути кількість операцій, які для цього знадобились. 
+*/ 
+
 
 function getPersistence(number) {
     let steps = 0;
@@ -169,6 +171,131 @@ function getPersistence(number) {
 
 let result = getPersistence(5632)
 console.log(result)
+
+
+
+/*
+Створи функцію isSpecialNumber, яка приймає додатне число n і визначає, чи є воно особливим.
+
+Число називається особливим, якщо кожна його цифра не більша ніж 5 (0, 1, 2, 3, 4 або 5).
+
+Функція повинна повернути рядок 'Special!!', якщо число особливе, та 'NOT!!' — якщо ні.
+
+Наприклад:
+
+isSpecialNumber(2); // 'Special!!'
+// 2 — знаходиться в інтервалі від 0 до 5
+
+isSpecialNumber(9); // 'NOT!!'
+// 9 > 5
+
+isSpecialNumber(23); // 'Special!!'
+// всі цифри числа 23 знаходяться в інтервалі від 0 до 5
+
+isSpecialNumber(38); // 'NOT!!'
+// 8 > 5
 */
+function isSpecialNumber(n) {
+    const numbreToStr = n + '';
+    const splitStr = numbreToStr.split('');
+
+    for (let i = 0; i < splitStr.length; i++) {
+        let curr = splitStr[i];
+        let currTonum = Number(curr);
+
+        if (currTonum > 5) {
+            return 'NOT!!'
+        }
+    }
+    return "Special!!"
+}
+
+
+
+// const resultNumber = isSpecialNumber(54)
+// console.log(resultNumber);
+
+/*
+А тепер перевіримо, чи всі наші числа охайні. Число вважається охайним, якщо кожна його цифра не менша за попередню.
+
+Реалізуй функцію isTidy, яка приймає додатне число та повертає true, якщо воно охайне, інакше — false.
+
+Наприклад:
+
+isTidy (12); // true
+// цифри розташовані за зростанням
+
+isTidy (32); // false
+// цифри розташовані за спаданням
+
+isTidy (1024); // false
+// 1 > 0
+
+isTidy(3445); // true
+// однакові цифри можуть бути поруч
+
+isTidy (13579); // true
+// цифри розташовані за зростанням
+
+*/
+
+function isTidy(number) {
+
+    let numToStr = String(number);
+    let prevNum = numToStr[0]
+    for (let i = 1; i < numToStr.length; i++) {
+
+        let current = numToStr[i];
+        current = Number(current)
+
+        if (current <= prevNum) {
+            prevNum = current
+        } else {
+            return false
+        }
+    }
+return true
+}
+
+let resulIsTidy = isTidy(1234)
+console.log(resulIsTidy)
+
+/*
+Реалізуй функцію isJumping, яка приймає число та повертає рядок 'JUMPING', якщо кожна цифра в числі відрізняється від сусідньої на 1, а якщо ні — рядок 'NOT JUMPING'.
+
+Зверни увагу:
+
+вхідне число завжди додатне;
+різниця між 9 і 0 не дорівнює 1;
+якщо поруч стоять однакові цифри, то число 'NOT JUMPING';
+якщо число складається з однієї цифри — воно 'JUMPING'.
+Наприклад:
+
+// число з однієї цифри
+isJumping(9); // 'JUMPING'
+
+// 7 і 9 відрізняються на 2, а не на 1
+isJumping(79); // 'NOT JUMPING'
+
+// усі сусідні цифри відрізняються на 1
+isJumping(23454); // 'JUMPING'
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
