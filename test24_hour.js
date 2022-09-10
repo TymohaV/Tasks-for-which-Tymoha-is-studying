@@ -25,17 +25,17 @@
  * Напиши функцію getLongestString, яка повертає найдовший рядок з масиву strings. 
  * Якщо два рядка мають однакову довжину - поверни перший з них.
  */
-function getLongestString(strings) {
-    let maxLength = strings[0];
+// function getLongestString(strings) {
+//     let maxLength = strings[0];
 
-    for (let i = 1; i < strings.length; i++) {
-        if (strings[i].length > maxLength.length) {
-            maxLength = strings[i];
-        }
+//     for (let i = 1; i < strings.length; i++) {
+//         if (strings[i].length > maxLength.length) {
+//             maxLength = strings[i];
+//         }
 
-    }
-    return maxLength
-}
+//     }
+//     return maxLength
+// }
 
 
 // let longest = getLongestString(['One', 'two', 'three','qwert', 'Mate Academy','four'])
@@ -112,28 +112,28 @@ function getLongestString(strings) {
  */
 
 
-function getDifferences(a, b) {
-    let temp = [];
-    let diff = [];
+// function getDifferences(a, b) {
+//     let temp = [];
+//     let diff = [];
 
-    for(let i = 0; i < a.length; i ++){
-        temp[a[i]] = true;
-    }
-    for(let i = 0; i < b.length; i ++){
-        if(temp[b[i]]){
-            delete temp[b[i]];
-        }else{
-            temp[b[i]] = true
-        }
-    }
-    for(let k in temp){
-        diff.push(Number(k))
-    }
-    return diff
-}
+//     for(let i = 0; i < a.length; i ++){
+//         temp[a[i]] = true;
+//     }
+//     for(let i = 0; i < b.length; i ++){
+//         if(temp[b[i]]){
+//             delete temp[b[i]];
+//         }else{
+//             temp[b[i]] = true
+//         }
+//     }
+//     for(let k in temp){
+//         diff.push(Number(k))
+//     }
+//     return diff
+// }
 
-let resgetDiff = getDifferences([1, 2, 3, 4],[2, 3, 5, 6])
-console.log(resgetDiff)
+// let resgetDiff = getDifferences([1, 2, 3, 4],[2, 3, 5, 6])
+// console.log(resgetDiff)
 
 // function getDifferences(a, b) {
 
@@ -149,28 +149,28 @@ console.log(resgetDiff)
  * Для цього потрібно перемножати всі цифри числа між собою, повторюючи цю операцію з добутком множення, 
  * доки результат не буде містити тільки одну цифру. 
  * Функція повинна повернути кількість операцій, які для цього знадобились. 
-*/ 
+*/
 
 
-function getPersistence(number) {
-    let steps = 0;
+// function getPersistence(number) {
+//     let steps = 0;
 
-    while (number > 10) {
-        let mul = 1;
-        number = ("" + number).split("");
-        for (let digit of number) {
-            mul *= digit;
-        }
-        number = mul;
-        steps++;
-    }
+//     while (number > 10) {
+//         let mul = 1;
+//         number = ("" + number).split("");
+//         for (let digit of number) {
+//             mul *= digit;
+//         }
+//         number = mul;
+//         steps++;
+//     }
 
-    return steps;
-}
+//     return steps;
+// }
 
 
-let result = getPersistence(5632)
-console.log(result)
+// let result = getPersistence(5632)
+// console.log(result)
 
 
 
@@ -195,20 +195,20 @@ isSpecialNumber(23); // 'Special!!'
 isSpecialNumber(38); // 'NOT!!'
 // 8 > 5
 */
-function isSpecialNumber(n) {
-    const numbreToStr = n + '';
-    const splitStr = numbreToStr.split('');
+// function isSpecialNumber(n) {
+//     const numbreToStr = n + '';
+//     const splitStr = numbreToStr.split('');
 
-    for (let i = 0; i < splitStr.length; i++) {
-        let curr = splitStr[i];
-        let currTonum = Number(curr);
+//     for (let i = 0; i < splitStr.length; i++) {
+//         let curr = splitStr[i];
+//         let currTonum = Number(curr);
 
-        if (currTonum > 5) {
-            return 'NOT!!'
-        }
-    }
-    return "Special!!"
-}
+//         if (currTonum > 5) {
+//             return 'NOT!!'
+//         }
+//     }
+//     return "Special!!"
+// }
 
 
 
@@ -239,29 +239,30 @@ isTidy (13579); // true
 
 */
 
-function isTidy(number) {
+// function isTidy(number) {
 
-    let numToStr = String(number);
-    let prevNum = numToStr[0]
-    for (let i = 1; i < numToStr.length; i++) {
+//     let numToStr = String(number);
+//     let prevNum = numToStr[0]
+//     for (let i = 1; i < numToStr.length; i++) {
 
-        let current = numToStr[i];
-        current = Number(current)
+//         let current = numToStr[i];
+//         current = Number(current)
 
-        if (current <= prevNum) {
-            prevNum = current
-        } else {
-            return false
-        }
-    }
-return true
-}
+//         if (current <= prevNum) {
+//             prevNum = current
+//         } else {
+//             return false
+//         }
+//     }
+// return true
+// }
 
-let resulIsTidy = isTidy(1234)
-console.log(resulIsTidy)
+// let resulIsTidy = isTidy(1234)
+// console.log(resulIsTidy)
 
 /*
-Реалізуй функцію isJumping, яка приймає число та повертає рядок 'JUMPING', якщо кожна цифра в числі відрізняється від сусідньої на 1, а якщо ні — рядок 'NOT JUMPING'.
+Реалізуй функцію isJumping, яка приймає число та повертає рядок 'JUMPING', 
+якщо кожна цифра в числі відрізняється від сусідньої на 1, а якщо ні — рядок 'NOT JUMPING'.
 
 Зверни увагу:
 
@@ -281,6 +282,42 @@ isJumping(79); // 'NOT JUMPING'
 isJumping(23454); // 'JUMPING'
 */
 
+function isJumping(number) {
+    let previusNum = number % 10
+    number = Math.floor(number / 10) 
+    while (number){
+      current = number % 10
+      number = Math.floor(number / 10) 
+      if (Math.abs(current - previusNum) !== 1){
+        return 'NOT JUMPING'
+      }
+      previusNum = current
+    } 
+    return 'JUMPING'
+  }
+  
+  console.log(isJumping(13))    // NOT JUMPING
+  console.log(isJumping(123))   // JUMPING
+  console.log(isJumping(12321)) // JUMPING
+  console.log(isJumping(1235))
+
+
+  function isJumping(number) {
+    let toStr = String(number);
+    let previusNum = toStr[0];
+    let current;
+    for (let i = 1; i < toStr.length; i++) {
+      current = Number(toStr[i]);
+      let count = Math.abs(current - previusNum);
+      // count может быть только положительным
+      // выход только если не 1
+      if(count !== 1){ 
+        return 'NOT JUMPING'
+      }
+      previusNum = current // переносим в previusNum
+    }
+    return 'JUMPING'
+  }
 
 
 
