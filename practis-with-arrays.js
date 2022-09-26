@@ -222,31 +222,50 @@ console.log(resGetLoc)
 // console.log(sumRobots);
 
 
-function sumArray(a, b) {
-  let c = [];
-  for (let i = 0; i < Math.max(a.length, b.length); i++) {
-    c.push((a[i] || 0) + (b[i] || 0));
+// function sumArray(a, b) {
+//   let c = [];
+//   for (let i = 0; i < Math.max(a.length, b.length); i++) {
+//     c.push((a[i] || 0) + (b[i] || 0));
+//   }
+//   return c;
+// }
+// let result = sumArray([1, 2, 3], [4, 5, 6])
+// console.log(result);
+
+
+// function getArraysSum(arr1, arr2) {
+//   if(arr1.length === 0 && arr2.length === 0){
+//     return 0;
+//   }
+//  return [...arr1, ...arr2].reduce((a, b) => a + b);
+// }
+// let arraySumResult = getArraysSum([1, 2, 3, 4], [2, 3, 5, 6])
+// console.log(arraySumResult)
+
+// function combineArrays(first, second) {
+//   let result = first.map(function(value, index){ 
+//     return value + second[index] 
+//   });
+// return result
+//   }
+// let resCombine = combineArrays([1, 2, 3, 4], [2, 3, 5, 6])
+// console.log(resCombine)
+// ----------------------------------------------------------------------------
+// function mergeArrays(arr1, arr2) {
+//  let newArr = [];
+//  let margeArr = arr1.concat(arr2).
+//  console.log(margeArr)
+// }
+// let resMerge = mergeArrays([1, 2, 3, 4], [ 6, 5])
+// console.log(resMerge);
+
+
+const multiTable = function(number) {
+  let n = [];
+  for(let i = 1; i <= 10; i++){
+    n.push(`${i} * ${number} = ${i * number}`)
   }
-  return c;
+  return n.join('\n')
 }
-let result = sumArray([1, 2, 3], [4, 5, 6])
-console.log(result);
-
-
-function getArraysSum(arr1, arr2) {
-  if(arr1.length === 0 && arr2.length === 0){
-    return 0;
-  }
- return [...arr1, ...arr2].reduce((a, b) => a + b);
-}
-let arraySumResult = getArraysSum([1, 2, 3, 4], [2, 3, 5, 6])
-console.log(arraySumResult)
-
-function combineArrays(first, second) {
-  let result = first.map(function(value, index){ 
-    return value + second[index] 
-  });
-return result
-  }
-let resCombine = combineArrays([1, 2, 3, 4], [2, 3, 5, 6])
-console.log(resCombine)
+let resTable = multiTable(5);
+console.log(resTable)

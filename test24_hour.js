@@ -281,7 +281,7 @@ isJumping(79); // 'NOT JUMPING'
 // усі сусідні цифри відрізняються на 1
 isJumping(23454); // 'JUMPING'
 */
-
+// ----------------------------------------------------------------------------
 function isJumping(number) {
     let previusNum = number % 10
     number = Math.floor(number / 10) 
@@ -300,7 +300,7 @@ function isJumping(number) {
   console.log(isJumping(123))   // JUMPING
   console.log(isJumping(12321)) // JUMPING
   console.log(isJumping(1235))
-
+// ----------------------------------------------------------------------------------------
 
   function isJumping(number) {
     let toStr = String(number);
@@ -318,18 +318,86 @@ function isJumping(number) {
     }
     return 'JUMPING'
   }
+// -----------------------------------------------------------------------------------------
+  function litres(time) {
+  
+    return Math.floor(time * 0.5);
+  }
 
+  let result =  litres(2)
+  console.log(result)
 
+// -----------------------------------------------------------------------------------------
+  function enough(cap, on, wait) {
+    if (on + wait < cap){
+    return 0;
+    } else {
+    return (on + wait) - cap;
+    }
+  }
 
+ let resEnough =  enough(20, 16, 30)
+console.log(resEnough);
 
+console.log(9 % 2)
 
+// ------------------------------------------------------------------------------------
 
+String.prototype.toAlternatingCase = function () {
+  var newStr = this.split('');
+  var result = '';
+  newStr.forEach(function(el) {
+    if(el === el.toUpperCase()) {
+      result += el.toLowerCase();/*from  w  w  w.j a v a2  s . c  o m*/
+    } else {
+      result += el.toUpperCase();
+    }
+  });
+  return result;
+};
 
+console.log('Hello world'.toAlternatingCase()); // 'HeLlO'
 
+// -------------------------------------------------------------------------------
+function nameShuffler(str){
+  return str.split('').reverse().join('')
+}
+let resNemeShuffler = nameShuffler("john McClane")
+console.log(resNemeShuffler)
 
+// -------------------------------------------------------------------------------
+function problem(x){
+ 
+  if(typeof(x == 'string') ){
+      return 'Error'
+  }
+}
+let resProblem = problem(1);
+console.log(resProblem);
 
+// --------------------------------------------------------------------------------
 
+function warnTheSheep(queue) {
+  var sheep = queue.length - queue.indexOf('wolf') - 1
+    if (sheep ==0 ){
+      return "Pls go away and stop eating my sheep"
+    } else {
+      return "Oi! Sheep number "+ sheep +"! You are about to be eaten by a wolf!"
+    }
+}
+let resShip = warnTheSheep(['sheep, sheep, sheep, sheep, sheep, wolf, sheep, sheep']);
+console.log(resShip)
+// ---------------------------------------------------------------------------------
 
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  if (mpg*fuelLeft >= distanceToPump) {
+    return true;
+  } else {
+    return false;
+  }
+};
+const resZeroFuel = zeroFuel(50, 25, 2);
+console.log(resZeroFuel);
 
 
 
